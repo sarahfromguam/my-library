@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+
+  <title>Edit</title>
+
+<!--/* Stylesheet not working, so I'm putting this here for now... */-->
+<style>
+
+/* General Tags */
+
+body, html {
+    background-color: #001D29;
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+div {
+    clear: none;
+    float: left;
+    margin: 0;
+    padding: 3rem 7rem;
+    width: 100%;
+}
+
+form p {
+    color: #001D29;
+    font-family: 'Gowun Batang', serif;
+    font-size: 1.2rem;
+}
+
+footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+footer p {
+    color: #949491;
+    text-align: center;
+    font-family: 'Gowun Batang', serif;
+    margin: 0;
+}
+
+
+h1 {
+    padding-bottom: 1rem;
+}
+
+h1, ul {
+    color: #001D29;
+    font-family: 'Gowun Batang', serif;
+}
+
+i {
+    padding-right: 0.5rem;
+    font-size: 4 rem;
+}
+
+img {
+    width: 20%;
+}
+
+nav {
+    padding-left: 5rem;
+}
+
+
+/* Classes */
+
+.bottom-div {
+    background-color: #001D29;
+}
+
+.border {
+    border: 1px solid #EFEEEA;
+}
+
+.form-title {
+    padding-bottom: 2rem;
+}
+
+.padding-top{
+    padding-top: 1rem;
+}
+
+.top-div{
+    padding-top: 1rem;
+}
+
+.top-div, nav {
+    background-color: #EFEEEA;
+}
+
+
+/* Color Control */
+
+.dark-text, i{
+    color: #001D29;
+}
+
+
+.input-form {
+    padding-left: 7rem;
+    background-color: #001D29;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.light-grey{
+    color: #949491;
+}
+
+.light-text,label, h2 {
+    color: #EFEEEA;
+    font-family: 'Gowun Batang', serif;
+}
+
+.red-hover:hover{
+    color: #B90E0A;
+}
+
+.right-align {
+    padding-right: 0;
+}
+
+.sienna {
+    color: #c06e5d
+}
+
+.white-grey{
+    color: #cccccc;
+}
+
+.white-grey:hover{
+    color: #E3242B;
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="row">
+<div class="border input-form col-lg-12">
+      <h2 form-title"> 🛠 Edit your rating: </h2>
+<form class="padding-top input-form" method="POST" action="{{ url_for('edit', id=id) }}" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    <p class="light-text"> <em> You currently have: </em> </p>
+    <p class="sienna"> {{ book }} </p>
+    <p class="light-text"> Change the rating: {{ form.rating_input() }}</p>
+    <input type="submit" value="Done">
+</form>
+</div>
+</div>
+</body>
+</html>

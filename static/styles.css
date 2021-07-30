@@ -1,0 +1,118 @@
+/* General Tags */
+
+body, html {
+    background-color: #001D29;
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+div {
+    clear: none;
+    float: left;
+    margin: 0;
+    padding: 3rem 7rem;
+    width: 100%;
+}
+
+form p {
+    color: #001D29;
+    font-family: 'Gowun Batang', serif;
+    font-size: 1.2rem;
+}
+
+footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+footer p {
+    color: #949491;
+    text-align: center;
+    font-family: 'Gowun Batang', serif;
+    margin: 0;
+}
+
+
+h1 {
+    padding-bottom: 1rem;
+}
+
+h1, ul {
+    color: #001D29;
+    font-family: 'Gowun Batang', serif;
+}
+
+i {
+    padding-right: 0.5rem;
+    font-size: 4 rem;
+}
+
+img {
+    width: 20%;
+}
+
+nav {
+    padding-left: 5rem;
+}
+
+
+/* Classes */
+
+.top-div{
+    padding-top: 1rem;
+}
+
+.top-div, nav {
+    background-color: #EFEEEA;
+}
+
+.bottom-div {
+    background-color: #001D29;
+}
+
+
+/* Color Control */
+
+.dark-text, i{
+    color: #001D29;
+}
+
+
+.form-title {
+    padding-bottom: 2rem;
+}
+
+.input-form {
+    padding-left: 7rem;
+    background-color: #001D29;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.light-grey{
+    color: #949491;
+}
+
+.light-text,label, h2 {
+    color: #EFEEEA;
+    font-family: 'Gowun Batang', serif;
+}
+
+.red-hover:hover{
+    color: #B90E0A;
+}
+
+.right-align {
+    padding-right: 0;
+}
+
+.white-grey{
+    color: #cccccc;
+}
+
+.white-grey:hover{
+    color: #E3242B;
+}

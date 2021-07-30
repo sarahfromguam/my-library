@@ -1,0 +1,37 @@
+{% include("header.html") %}
+
+<div class="top-div">
+    <h1>My Library </h1>
+    {% if not book_list: %}
+        <p> Library is empty. </p>
+    {% else: %}
+    {% for book in book_list: %}
+        <ul>
+            <li> {{ book }}
+                <a class="light-grey" href = "{{ url_for('edit', id=book.id)}}"> edit </a>
+                <span class="light-grey"> || </span>
+                <a class="light-grey red-hover" href = "{{ url_for('delete', id=book.id)}}"> delete </a>
+            </li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+    <a href="/add">Add Finished Books</a>
+</div>
+
+<div id="to-read" class="bottom-div">
+    <h1 class="light-text"> Books To Read </h1>
+    {% if not to_read: %}
+        <p class="light-text"> Library is empty. </p>
+    {% else: %}
+    {% for book in to_read: %}
+    <ul class="light-text">
+        <li class="light-text"> {{ book }}
+        <a class="white-grey red-hover" href = "{{ url_for('delete_to_read', id=book.id)}}" >delete </a>
+        </li>
+    </ul>
+    {% endfor %}
+    {% endif %}
+    <a href="/add-to-read">Add Books to Read</a>
+</div>
+    
+{% include("footer.html") %}

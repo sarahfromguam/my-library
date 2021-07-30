@@ -1,0 +1,16 @@
+{% include "header.html" %}
+{% block content %}
+<div class="row">
+<div class="input-form col-lg-12">
+      <h2 class="form-title"> Add a book to read! </h2>
+<form class="input-form" method="POST" action="/add-to-read" enctype="multipart/form-data">
+  {{ form.csrf_token }}
+    <p> {{ form.title_input.label }} <br> {{ form.title_input(size=30) }} </p>
+    <p> {{ form.author_input.label }} <br> {{ form.author_input(size=30)}} </p>
+<input type="submit" value="Add a book to the list">
+</form>
+</div>
+</div>
+{% endblock %}
+
+{% include "footer.html" %}
