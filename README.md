@@ -2,7 +2,7 @@
 
 ABOUT
 
-This is my little library, inspired by my newfound love for reading. This site is capable of adding books that I've read to "My Library" and books I'd like to read to "Books To Read". The site is served with Flask, the database uses SQLAlchemy, and the forms are created with WTForms. 
+This is my little library, inspired by my love for reading. This site is capable of adding books that I've read to "My Library" and books I'd like to read to "Books To Read". The site is served with Flask, the database uses SQLAlchemy, and the forms are created with WTForms. 
 
 IMPROVEMENTS
 
